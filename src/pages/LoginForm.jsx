@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { assets } from '../assets/assets_admin/assets'
 import PatientLogin from "./Patient/PatientLogin";
-import AdminLogin from "./admin/Adminlogin";
+import AdminLogin from "./admin/AdminLogin";
 import DoctorLogin from "./Doctor/DoctorLogin";
 
 const userTypes = [
