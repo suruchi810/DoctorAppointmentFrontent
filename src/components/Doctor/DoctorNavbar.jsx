@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import admin_logo from '../../assets/assets_admin/admin_logo.svg'
 import { DoctorContext } from '@/context/DoctorContext';
 import { useNavigate } from 'react-router-dom';
-a
+
 const DoctorNavbar = () => {
   const navigate = useNavigate();
   const {dToken, setDToken} = useContext(DoctorContext);
