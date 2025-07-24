@@ -10,7 +10,7 @@ import {
 import { CiCircleRemove } from "react-icons/ci";
 import axios from 'axios';
 import { CiCircleCheck } from "react-icons/ci";
-import { DoctorContext } from '@/context/doctorContext';
+import { DoctorContext } from '@/context/DoctorContext';
 
 const DoctorAllAppointments = () => {
 

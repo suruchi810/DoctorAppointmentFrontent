@@ -3,7 +3,7 @@ import { MdDashboard, MdPeopleAlt } from "react-icons/md";
 import { IoIosAddCircle } from "react-icons/io";
 import { HiClipboardList } from "react-icons/hi";
 import { AdminContext } from '@/context/AdminContext';
-import { DoctorContext } from '@/context/doctorContext';
+import { DoctorContext } from '@/context/DoctorContext';
 
 const Sidebar = ({ active, setActive }) => {
     const { aToken } = useContext(AdminContext);

@@ -2,7 +2,7 @@ import { AdminContext } from '@/context/AdminContext';
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import { DoctorContext } from '@/context/doctorContext';
+import { DoctorContext } from '@/context/DoctorContext';
 
 const DoctorLogin = () => {
     const navigate = useNavigate();
@@ -59,4 +59,4 @@ const DoctorLogin = () => {
     );
 };
 
-export default DoctorLogin;
+export default DoctorLogin;C

@@ -10,7 +10,7 @@ import {
   TableRow,
   TableCell
 } from "@/components/ui/table";
-import { DoctorContext } from '@/context/doctorContext';
+import { DoctorContext } from '@/context/DoctorContext';
 
 const fallbackImage = "https://via.placeholder.com/40";
 

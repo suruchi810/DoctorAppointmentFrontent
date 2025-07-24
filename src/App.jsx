@@ -25,7 +25,7 @@ import { Route, Routes } from 'react-router-dom'
 import PatientNavbar from './components/Patient/PatientNavbar';
 import Contact from './pages/Patient/Contact';
 import Footer from './components/Patient/Footer';
-import { DoctorContext } from './context/doctorContext';
+import { DoctorContext } from './context/DoctorContext';
 
 function App() {
 
