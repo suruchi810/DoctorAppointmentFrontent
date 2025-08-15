@@ -24,8 +24,10 @@ const PatientNavbar = () => {
       if(window.scrollY > 50){
         setIsScrolled(true);
       }else {
-        setIsScrolled(false)
+       setIsScrolled(false)
       }
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
   }
 
   return (
