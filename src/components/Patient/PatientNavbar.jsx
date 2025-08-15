@@ -11,6 +11,7 @@ const PatientNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
   const { userData, backendUrl } = useContext(PatientContext);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -18,9 +19,17 @@ const PatientNavbar = () => {
     navigate('/');
   }
 
+  useEffect(()=> {
+    const handleScroll = () => {
+      if(window.scrollY > 50){
+        setIsScrolled(true);
+      }else {
+        setIsScrolled(false)
+      }
+  }
 
   return (
-    <div className='flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0'>
+    <div className={`flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${isScrolled ? "bg-white": ""}`}>
       <img
         onClick={() => navigate('/a')}
         src={assets.logo}
