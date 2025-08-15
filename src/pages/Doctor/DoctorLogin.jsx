@@ -22,6 +22,9 @@ const DoctorLogin = () => {
                 setDToken(res.data.dToken);
                 localStorage.setItem('dToken', res.data.dToken);
                 navigate('/')
+            } else {
+                // If backend sends success: false with a message
+                setErrorMessage(res.data.message || "Login failed");
             }
         } catch (error) {
             console.error("Login failed:", error.response?.data?.message || error.message);
