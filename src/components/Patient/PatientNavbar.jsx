@@ -19,16 +19,22 @@ const PatientNavbar = () => {
     navigate('/');
   }
 
-  useEffect(()=> {
-    const handleScroll = () => {
-      if(window.scrollY > 50){
-        setIsScrolled(true);
-      }else {
-       setIsScrolled(false)
-      }
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-  }
+  useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
 
   return (
     <div className={`flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${isScrolled ? "bg-white": ""}`}>
