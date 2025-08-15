@@ -33,39 +33,39 @@ const DoctorLogin = () => {
     };
 
     return (
-
-        <div className='flex flex-col gap-3'>
-            {errorMessage && (
-                <div className="text-red-500 text-sm border border-red-400 p-2 rounded">
-                    {errorMessage}
-                </div>
-            )}
-            <div className='flex flex-col gap-2'>
-                <label>Email</label>
-                <input
-                    type="text"
-                    value={userData.email}
-                    onChange={(e) => setUserData({ ...userData, email: e.target.value })}
-                    className='w-full py-2 px-4 bg-gray-50 border border-gray-300'
-                />
+    <form className='flex flex-col gap-3' onSubmit={onSubmitHandler}>
+        {errorMessage && (
+            <div className="text-red-500 text-sm border border-red-400 p-2 rounded">
+                {errorMessage}
             </div>
-            <div className='flex flex-col gap-2'>
-                <label>Password</label>
-                <input
-                    type="password"
-                    value={userData.password}
-                    onChange={(e) => setUserData({ ...userData, password: e.target.value })}
-                    className='w-full py-2 px-4 bg-gray-50 border border-gray-300'
-                />
-            </div>
-            <button
-                onClick={onSubmitHandler}
-                className='bg-blue-500 rounded-[5px] py-2'
-            >
-                Login
-            </button>
+        )}
+        <div className='flex flex-col gap-2'>
+            <label>Email</label>
+            <input
+                type="text"
+                value={userData.email}
+                onChange={(e) => setUserData({ ...userData, email: e.target.value })}
+                className='w-full py-2 px-4 bg-gray-50 border border-gray-300'
+            />
         </div>
-    );
+        <div className='flex flex-col gap-2'>
+            <label>Password</label>
+            <input
+                type="password"
+                value={userData.password}
+                onChange={(e) => setUserData({ ...userData, password: e.target.value })}
+                className='w-full py-2 px-4 bg-gray-50 border border-gray-300'
+            />
+        </div>
+        <button
+            type="submit"
+            className='bg-blue-500 rounded-[5px] py-2 text-white'
+        >
+            Login
+        </button>
+    </form>
+);
+
 };
 
 export default DoctorLogin;
