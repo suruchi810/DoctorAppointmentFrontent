@@ -7,7 +7,7 @@ const TopDoctors = () => {
     const url = import.meta.env.VITE_BACKEND_URL;
     const {doctors} = useContext(PatientContext);
     return (
-        <div className='flex flex-col items-center gap-3 my-13  md:mx-10'>
+        <div className='z-15 flex flex-col items-center gap-3 my-13  md:mx-10'>
             <h1 className='text-[40px] text-gray-900 font-medium'>Top Doctors to Book</h1>
             <p className='text-[18px] text-[#4B5563]'>Simply browse through our extensive list of trusted doctors.</p>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4'>
