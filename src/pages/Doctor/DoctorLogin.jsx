@@ -7,6 +7,7 @@ import { DoctorContext } from '@/context/DoctorContext';
 const DoctorLogin = () => {
     const navigate = useNavigate();
     const { setDToken, backendUrl } = useContext(DoctorContext);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const [userData, setUserData] = useState({
         email: "",
@@ -34,6 +35,11 @@ const DoctorLogin = () => {
     return (
 
         <div className='flex flex-col gap-3'>
+            {errorMessage && (
+                <div className="text-red-500 text-sm border border-red-400 p-2 rounded">
+                    {errorMessage}
+                </div>
+            )}
             <div className='flex flex-col gap-2'>
                 <label>Email</label>
                 <input
