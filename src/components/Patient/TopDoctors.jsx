@@ -12,7 +12,7 @@ const TopDoctors = () => {
             <p className='text-[18px] text-[#4B5563]'>Simply browse through our extensive list of trusted doctors.</p>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4'>
                 {doctors?.slice(0, 8).map((item, idx) => (
-                    <div key={idx} onClick={()=>navigate(`/appointment/${item._id}`)} className='bg-white shadow-md p-4 cursor-pointer transform transition duration-300 hover:shadow-lg hover:-translate-y-1'>
+                    <div key={idx} onClick={()=>navigate(`/appointment/${item._id}`)} className='bg-white shadow-md p-4 cursor-pointer transform transition duration-300 hover:shadow-lg hover:-translate-y-1 hover: z-10'>
                         <div className='bg-blue-50'><img src={`${url}/images/${item.image}`} alt="" /></div>
                         <div className='py-4'>
                             <div className='flex items-center px-2'><p className='h-2 w-2 rounded-full bg-green-500'></p><p className='text-[15px] text-[#0FBF00] px-2'>Available</p></div>
