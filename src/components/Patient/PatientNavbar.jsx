@@ -37,7 +37,7 @@ const PatientNavbar = () => {
 
 
   return (
-    <div className={`flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${
+    <div className={`z-20 flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${
         isScrolled ? 'bg-white shadow-[0_2px_0_rgba(0,0,0,0)]' : ''
       }`}>
       <img
