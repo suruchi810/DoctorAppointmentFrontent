@@ -37,7 +37,9 @@ const PatientNavbar = () => {
 
 
   return (
-    <div className={`flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${isScrolled ? "bg-white": ""}`}>
+    <div className={`flex justify-between items-center w-full border-b border-b-gray-200 h-[75px] sticky top-0 ${
+        isScrolled ? 'bg-white shadow-md' : ''
+      }`}>
       <img
         onClick={() => navigate('/a')}
         src={assets.logo}
